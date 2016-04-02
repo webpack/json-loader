@@ -6,5 +6,9 @@ module.exports = function(source) {
 	this.cacheable && this.cacheable();
 	var value = typeof source === "string" ? JSON.parse(source) : source;
 	this.value = [value];
-	return "module.exports = " + JSON.stringify(value) + ";";
+	return "module.exports = " +
+		JSON.stringify(value)
+			.replace(/\u2028/g, '\\u2028')
+			.replace(/\u2029/g, '\\u2029') +
+		";";
 }
