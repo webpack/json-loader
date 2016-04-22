@@ -7,7 +7,7 @@
 ## Usage
 
 ``` javascript
-var json = require("json!./file.json");
+var json = require("!json!./file.json");
 // => returns file.json content as json parsed object
 ```
 
