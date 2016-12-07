@@ -2,7 +2,13 @@
 
 ## Installation
 
+For webpack v2 users:
+
 `npm install --save json-loader`
+
+For webpack v1 users:
+
+`npm install --save json-loader@0.5.4`
 
 ## Usage
 
