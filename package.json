@@ -7,5 +7,8 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/webpack/json-loader.git"
+  },
+  "devDependencies": {
+    "node-json-minify": "^1.0.0"
   }
 }
