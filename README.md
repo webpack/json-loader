@@ -60,6 +60,17 @@ import json from 'file.json';
 import json from 'json-loader!file.json';
 ```
 
+
+
+### Options
+
+#### `string`
+
+By default, the json-loader will output the json object, set this query parameter to 'ture' can output the json object as a string, e.g. `require('json-loader?string!../index.json')`. It's useful work with `ExtractTextPlugin`
+
+
+
+
 <h2 align="center">Maintainer</h2>
 
 <table>
@@ -97,6 +108,7 @@ import json from 'json-loader!file.json';
     </tr>
   <tbody>
 </table>
+
 
 [npm]: https://img.shields.io/npm/v/json-loader.svg
 [npm-url]: https://npmjs.com/package/json-loader
