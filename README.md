@@ -64,9 +64,9 @@ import json from 'json-loader!file.json';
 
 ### Options
 
-#### `string`
+#### `stringify`
 
-By default, the json-loader will output the json object, set this query parameter to 'ture' can output the json object as a string, e.g. `require('json-loader?string!../index.json')`. It's useful work with `ExtractTextPlugin`
+By default, the json-loader will output the json object, set this query parameter to 'true' can output the json object as a string, e.g. `require('json-loader?stringify!../index.json')`.
 
 
 

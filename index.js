@@ -5,11 +5,10 @@
 var loaderUtils = require('loader-utils');
 
 module.exports = function(source) {
-    this.cacheable && this.cacheable();    
     var value = typeof source === "string" ? JSON.parse(source) : source;
     this.value = [value];
-    var query = loaderUtils.getOptions(this) || {}
-    if(query.string)
-	return "module.exports = `" + JSON.stringify(value) + "`;";
-    return "module.exports = " + JSON.stringify(value) + ";";
+    var query = loaderUtils.getOptions(this) || {};
+    var outprefix = this.version && this.version >= 2 ? "export default " : "module.exports = ";
+    var out = JSON.stringify(value);
+    return outprefix + (query.stringify ? "'" + out + "'" : out) + ";";
 }
