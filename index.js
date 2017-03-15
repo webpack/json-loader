@@ -6,9 +6,9 @@ var loaderUtils = require('loader-utils');
 
 module.exports = function(source) {
     var value = typeof source === "string" ? JSON.parse(source) : source;
-    this.value = [value];
-    var query = loaderUtils.getOptions(this) || {};
-    var outprefix = this.version && this.version >= 2 ? "export default " : "module.exports = ";
-    var out = JSON.stringify(value);
-    return outprefix + (query.stringify ? "'" + out + "'" : out) + ";";
+    var options = loaderUtils.getOptions(this) || {};
+    value = JSON.stringify(value)
+    value = options.stringify ? `'${value}'` : value
+    var module = this.version && this.version >= 2 ? `export default ${value};` : `module.exports = ${value};`;
+    return module
 }
