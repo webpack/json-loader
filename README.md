@@ -13,7 +13,9 @@
   <h1>JSON Loader</h1>
 </div>
 
-**Note: Since webpack v2, JSON files will work by default. You might still want to use this if you use a custom file extension.**
+<h2 align="center">Note</h2>
+
+**Since webpack v2, JSON files will work by default. You might still want to use this if you use a custom file extension.**
 
 <h2 align="center">Install</h2>
 
