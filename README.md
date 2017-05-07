@@ -13,13 +13,13 @@
   <h1>JSON Loader</h1>
 </div>
 
-**Note: Since webpack v2, JSON files will work by default. You might still want to use this if you use a custom file extension.**
-
 <h2 align="center">Install</h2>
 
 ```bash
 npm install --save-dev json-loader
 ```
+
+⚠️ **Note: Since webpack v2, importing of JSON files will work by default. You might still want to use this if you use a custom file extension.** 
 
 <h2 align="center">Usage</h2>
 
