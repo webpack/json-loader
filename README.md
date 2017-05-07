@@ -60,17 +60,6 @@ import json from 'file.json';
 import json from 'json-loader!file.json';
 ```
 
-
-
-### Options
-
-#### `stringify`
-
-By default, the json-loader will output the json object, set this query parameter to 'true' can output the json object as a string, e.g. `require('json-loader?stringify!../index.json')`.
-
-
-
-
 <h2 align="center">Maintainer</h2>
 
 <table>
@@ -108,7 +97,6 @@ By default, the json-loader will output the json object, set this query paramete
     </tr>
   <tbody>
 </table>
-
 
 [npm]: https://img.shields.io/npm/v/json-loader.svg
 [npm-url]: https://npmjs.com/package/json-loader

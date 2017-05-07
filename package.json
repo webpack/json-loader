@@ -7,8 +7,5 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/webpack/json-loader.git"
-  },
-  "dependencies": {
-    "loader-utils": "^1.0.3"
   }
 }
