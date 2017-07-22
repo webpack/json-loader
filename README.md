@@ -21,45 +21,34 @@
 npm install --save-dev json-loader
 ```
 
-⚠️ **Note: Since webpack v2, importing of JSON files will work by default. You might still want to use this if you use a custom file extension.** 
+> ⚠️ **Since `webpack >= v2.0.0`, importing of JSON files will work by default. You might still want to use this if you use a custom file extension. See the [v1.0.0 -> v2.0.0 Migration Guide](https://webpack.js.org/guides/migrating/#json-loader-is-not-required-anymore) for more information**
 
 <h2 align="center">Usage</h2>
 
+### `Inline`
 
-### Configuration (recommended)
+```js
+const json = require('json-loader!./file.json');
+```
+
+### `Configuration` (recommended)
+
+```js
+const json = require('./file.json');
+```
 
 **webpack.config.js**
 ```js
 module.exports = {
   module: {
-    rules: [
+    loaders: [
       {
         test: /\.json$/,
-        use: 'json-loader'
+        loader: 'json-loader'
       }
     ]
   }
 }
-```
-
-```js
-import json from 'file.json';
-```
-
-### CLI
-
-```bash
-webpack --module-bind 'json=json-loader'
-```
-
-```js
-import json from 'file.json';
-```
-
-### Inline
-
-```js
-import json from 'json-loader!file.json';
 ```
 
 <h2 align="center">Maintainer</h2>
@@ -75,6 +64,7 @@ import json from 'json-loader!file.json';
     </tr>
   </tbody>
 </table>
+
 
 [npm]: https://img.shields.io/npm/v/json-loader.svg
 [npm-url]: https://npmjs.com/package/json-loader
